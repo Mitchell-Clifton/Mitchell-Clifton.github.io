@@ -1,0 +1,75 @@
+body {
+    background: black;
+    color: rgb(45, 45, 45);
+    padding: 10px;
+    font-family: arial;
+}
+#all-contents {
+  max-width: 800px;
+    margin: auto;
+}
+
+/* navigation menu */
+nav {
+    background: black;
+   margin: 0 auto;
+    display: flex;
+    padding: 10px;
+    border-style: outset;
+   border-width: 5px;
+   border-color: gold;
+   border-radius: 10px;
+
+}
+h1 {
+    display: flex;
+    align-items: center;
+    color: gold;
+    flex: 1;
+    margin: 0;
+}
+#nav-ul {
+    list-style-image: none;
+}
+.nav-li {
+    display: inline-block;
+    padding: 0 10px;
+}
+a {
+    text-decoration: none;
+    color: gold;
+}
+
+/* main container area beneath menu */
+main {
+    background: black;
+    display: flex;
+    border: gold double;
+    border-radius: 10px;
+    border-width: 5px;
+    margin-top: 10px;
+}
+.sidebar {
+    margin-right: 25px;
+    padding: 10px;
+}
+.sidebar-img {
+    width: 200px;
+}
+.content {
+    flex: 1;
+    padding: 15px;
+    color: gold;
+}
+
+/* portfolio styles */
+#interests {
+    border: 4px gold double;
+    padding: 10px;
+    border-radius: 10px
+}
+h2, h3 {
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   color: gold
+}
