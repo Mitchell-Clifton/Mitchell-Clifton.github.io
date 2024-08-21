@@ -3,6 +3,9 @@ body {
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
+    background-image: url(images/background.jpg);
+    background-size: auto;
+
 }
 #all-contents {
   max-width: 800px;
@@ -73,3 +76,28 @@ h2, h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
    color: gold
 }
+         /* portfolio styles */
+         .content h1 {
+            color: black;
+        }
+
+        #portfolio {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #portfolio li {
+            background:none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #portfolio li:hover {
+            background: gray;
+        }
+
+        #portfolio a {
+            text-decoration: none;
+            color: gold;
+        }
