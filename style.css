@@ -30,6 +30,7 @@ h1 {
     color: gold;
     flex: 1;
     margin: 0;
+    text-shadow: gold 5px 5px 5px;
 }
 #nav-ul {
     list-style-image: none;
@@ -41,6 +42,7 @@ h1 {
 a {
     text-decoration: none;
     color: gold;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px gold, 0 0 40px gold, 0 0 50px gold, 0 0 60px gold , 0 0 70px gold;
 }
 
 /* main container area beneath menu */
@@ -63,6 +65,8 @@ main {
     flex: 1;
     padding: 15px;
     color: gold;
+    text-shadow: gold 0px 0px 5px;
+    
 }
 
 /* portfolio styles */
