@@ -3,7 +3,7 @@ body {
 }
 
 canvas {
-  background-image: url("images/backgroud1.gif");
+  background-image: url("images/volcano.gif");
   margin: 20px;
   background-repeat: no-repeat;
   background-size: cover;
