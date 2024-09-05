@@ -72,12 +72,12 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-    createCollectable("steve", 100, 160, 10); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
-    createCollectable("grace", 700, 200); 
-    createCollectable("database", 300, 70);
-    createCollectable("diamond", 1300, 50);
-    createCollectable("kennedi", 700, 600);
-    createCollectable("max", 900, 150);
+    createCollectable("silverbar", 100, 160, 10); 
+    createCollectable("stackgoldbars", 700, 200); 
+    createCollectable("diamond", 300, 70);
+    createCollectable("emerald", 1300, 50);
+    createCollectable("goldbar", 700, 600);
+    createCollectable("sapphire", 900, 130);
     
     // TODO 3
     // Create cannons
