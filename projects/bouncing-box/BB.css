@@ -1,0 +1,35 @@
+
+		.box {
+			width: 70px;
+			height: 70px;
+			font-size: 300%;
+			text-align: center;
+			user-select: none;
+			display: block;
+			position: absolute;
+			top: 100px;
+			/* Change me! */
+			left: 0px;
+      background-color: #222;
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+		}
+    
+
+		.board {
+			height: 100vh;
+		}
+    @keyframes color {
+      0% {
+        background-color: red;
+      }
+      50% {
+        background-color: blue;
+      }
+      100% {
+        background-color: green;
+      }
+body{
+  background-image: url(img/);
+}
