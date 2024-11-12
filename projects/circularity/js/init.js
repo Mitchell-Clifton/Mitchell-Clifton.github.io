@@ -65,10 +65,8 @@ circles.push(circle);
                 }
             }
             for (var i = 0; i < circles.length; i++) {
-                var circle = circles[i];
                 physikz.updatePosition(circles[i]);
                 game.checkCirclePosition(circles[i]);
-                physikz.updatePosition(circle);
             }
             // TODO 9 : Iterate over the array
            
