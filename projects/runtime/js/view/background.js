@@ -49,18 +49,27 @@ var background = function (window) {
             
             // TODO 2: - Add a moon and starfield
             var moon = draw.bitmap("img/people.png");
-            moon.x = 50;
-            moon.y = 50;
-            moon.scaleX = .5;
-            moon.scaleY = .5;
+            moon.x = 600;
+            moon.y = 330;
+            moon.scaleX = .2;
+            moon.scaleY = .2;
             background.addChild(moon)
-            
+            var road = draw.bitmap("img/pixelroad.jpg");
+            road.x = 0;
+            road.y = 535;
+            road.scaleX = 1.5;
+            road.scaleY = 1;
+            background.addChild(road)
+           
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
+            var building;
             
             
             // TODO 3: Part 1 - Add a tree
-            
-            
+            var tree = draw.bitmap("img/tree.png");
+            tree.x = 300;
+            tree.y = groundY - 275;
+            background.addChild(tree);
         } // end of render function - DO NOT DELETE
         
         
@@ -73,6 +82,10 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
+            tree.x = tree.x - 1;
+            if (tree.x < -200) {
+            tree.x = canvasWidth;
+        }        
             
             
             // TODO 4: Part 2 - Parallax
