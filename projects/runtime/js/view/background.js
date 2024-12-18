@@ -95,19 +95,19 @@ var background = function (window) {
             tree.x = canvasWidth;
            
             }
+            
+             
+            
+            
+            // TODO 4: Part 2 - Parallax
             for(var i = 0; i < buildings.length; i++){
                 var eachBuilding = buildings[i]
-                eachBuilding.x -=1;
+                eachBuilding.x -=6;
                 if(eachBuilding.x < -200){
                     eachBuilding.x = canvasWidth;
                 }
 
             }
-             
-            
-            
-            // TODO 4: Part 2 - Parallax
-            
 
         } // end of update function - DO NOT DELETE
         
