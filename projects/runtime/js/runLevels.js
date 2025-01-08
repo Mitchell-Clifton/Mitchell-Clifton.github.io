@@ -22,7 +22,7 @@ var runLevels = function (window) {
     var damageFromObstacle = 10;
     var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
     sawBladeHitZone.x = 6400;
-    sawBladeHitZone.y = 250;
+    sawBladeHitZone.y = 780;
     game.addGameItem(sawBladeHitZone);
     var obstacleImage = draw.bitmap("img/sawblade.png");
     obstacleImage.x = -25
@@ -41,9 +41,10 @@ var runLevels = function (window) {
       obstacleImage.y = -25; 
       sawBladeHitZone.addChild(obstacleImage);
   }
-  createSawBlade(5500, 250)
-  createSawBlade(5800, 250)
-  createSawBlade(6100, 250)
+  createSawBlade(5500, 780)
+  createSawBlade(5800, 780)
+  createSawBlade(6100, 780)
+  createSawBlade(1700, 780)
 
 var enemy = game.createGameItem("enemy", 25);
 var enemyImage = draw.bitmap("img/enemyImage.png");
@@ -112,8 +113,8 @@ marker.x = x;
 marker.y = y;
 marker.velocityX = -2;
 var markerImage = draw.bitmap("img/marker.png");
-markerImage.x = -12; 
-markerImage.y = -12; 
+markerImage.x = -145; 
+markerImage.y = -170; 
 marker.addChild(markerImage);
 marker.onPlayerCollision = function() {
 startLevel(); 
@@ -123,7 +124,7 @@ startLevel();
   };
 game.addGameItem(marker);
 }
-createMarker(10000, 600)
+createMarker(10000, 750)
 
 var levelData = 
   {
