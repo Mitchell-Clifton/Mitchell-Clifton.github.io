@@ -21,8 +21,8 @@ var runLevels = function (window) {
     var hitZoneSize = 25;
     var damageFromObstacle = 10;
     var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-    sawBladeHitZone.x = 2000;
-    sawBladeHitZone.y = 750;
+    sawBladeHitZone.x = 6400;
+    sawBladeHitZone.y = 250;
     game.addGameItem(sawBladeHitZone);
     var obstacleImage = draw.bitmap("img/sawblade.png");
     obstacleImage.x = -25
@@ -41,17 +41,17 @@ var runLevels = function (window) {
       obstacleImage.y = -25; 
       sawBladeHitZone.addChild(obstacleImage);
   }
-  createSawBlade(3000, 750)
-  createSawBlade(2700, 750)
-  createSawBlade(2400, 750)
+  createSawBlade(5500, 250)
+  createSawBlade(5800, 250)
+  createSawBlade(6100, 250)
 
 var enemy = game.createGameItem("enemy", 25);
-var redSquare = draw.rect(50, 50, "red");
-redSquare.x = -25;
-redSquare.y = -25;
-enemy.x = 1000;
-enemy.y = 750;
-enemy.addChild(redSquare);
+var enemyImage = draw.bitmap("img/enemyImage.png");
+enemyImage.x = -100;
+enemyImage.y = -230;
+enemy.x = 3500;
+enemy.y = 780;
+enemy.addChild(enemyImage);
 game.addGameItem(enemy);
 enemy.velocityX = -3
 enemy.onPlayerCollision = function () {
@@ -63,10 +63,10 @@ enemy.fadeOut();
 }
 function createEnemy(x, y) {
 var enemy = game.createGameItem("enemy", 25);
-var redSquare = draw.rect(50, 50, "red");
-redSquare.x = -25;
-redSquare.y = -25;
-enemy.addChild(redSquare);
+var enemyImage = draw.bitmap("img/enemyImage.png");
+enemyImage.x = -100;
+enemyImage.y = -230;
+enemy.addChild(enemyImage);
 enemy.x = x;
 enemy.y = y;
 enemy.velocityX = -2;
@@ -79,19 +79,21 @@ enemy.fadeOut();
   };
 game.addGameItem(enemy);
 }
-createEnemy(400, 250);
-createEnemy(800, 250);
-createEnemy(1200, 250);
+createEnemy(2000, 780);
+createEnemy(2300, 780);
+createEnemy(2600, 780);
+createEnemy(2900, 780);
+createEnemy(3200, 780);
 
 function createReward(x, y) {
 var reward = game.createGameItem("reward", 25);
 reward.x = x;
 reward.y = y;
-var rewardImage = draw.bitmap("img/reward.png"); // Adjust for an image
-rewardImage.x = -12; // Center image
-rewardImage.y = -12; // Center image
+reward.velocityX = -2;
+var rewardImage = draw.bitmap("img/reward.png"); 
+rewardImage.x = -45; 
+rewardImage.y = -38; 
 reward.addChild(rewardImage);
-
 reward.onPlayerCollision = function() {
 game.increaseScore(100); // Increase score
 reward.fadeOut(); // disappear
@@ -102,12 +104,13 @@ reward.fadeOut(); // disappear
   };
 game.addGameItem(reward);
 }
-createReward(400, 250)
+createReward(5000, 750)
 
 function createMarker(x, y) {
 var marker = game.createGameItem("marker", 25);
 marker.x = x;
 marker.y = y;
+marker.velocityX = -2;
 var markerImage = draw.bitmap("img/marker.png");
 markerImage.x = -12; 
 markerImage.y = -12; 
@@ -120,21 +123,17 @@ startLevel();
   };
 game.addGameItem(marker);
 }
-createMarker(2000, 750)
+createMarker(10000, 600)
 
-var levelData = [
+var levelData = 
   {
 name: "Robot Romp",
 number: 1,
 speed: -3,
-gameItems: [
-{ type: "sawblade", x: 450, y: groundY - 25 },
-{ type: "enemy", x: 700, y: groundY - 50 },
-{ type: "reward", x: 1000, y: groundY - 60 },
-{ type: "marker", x: 1200, y: groundY - 30 } // End-of-level marker
-],
-},
-];
+
+
+}
+
 function startLevel() {
       // TODO 13 goes below here
 var level = levelData[currentLevel]; // Get current level
