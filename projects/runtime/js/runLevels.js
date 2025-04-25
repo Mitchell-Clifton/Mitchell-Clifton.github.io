@@ -45,46 +45,47 @@ var runLevels = function (window) {
   createSawBlade(5800, 780)
   createSawBlade(6100, 780)
   createSawBlade(1700, 780)
+  createSawBalde(2200, 780)
 
-var enemy = game.createGameItem("enemy", 25);
-var enemyImage = draw.bitmap("img/enemyImage.png");
-enemyImage.x = -100;
-enemyImage.y = -230;
-enemy.x = 3500;
-enemy.y = 780;
-enemy.addChild(enemyImage);
-game.addGameItem(enemy);
-enemy.velocityX = -3
-enemy.onPlayerCollision = function () {
-  game.changeIntegrity(-10) 
-};
-enemy.onProjectileCollision = function () {
-  game.increaseScore(100);
-enemy.fadeOut();
-}
-function createEnemy(x, y) {
-var enemy = game.createGameItem("enemy", 25);
-var enemyImage = draw.bitmap("img/enemyImage.png");
-enemyImage.x = -100;
-enemyImage.y = -230;
-enemy.addChild(enemyImage);
-enemy.x = x;
-enemy.y = y;
-enemy.velocityX = -2;
-enemy.onPlayerCollision = function() {
-game.changeIntegrity(-10);
+  var enemy = game.createGameItem("enemy", 25);
+  var enemyImage = draw.bitmap("img/enemyImage.png");
+  enemyImage.x = -100;
+  enemyImage.y = -230;
+  enemy.x = 3500;
+  enemy.y = 780;
+  enemy.addChild(enemyImage);
+  game.addGameItem(enemy);
+  enemy.velocityX = -3
+  enemy.onPlayerCollision = function () {
+    game.changeIntegrity(-10) 
   };
-enemy.onProjectileCollision = function() {
-game.increaseScore(100);
-enemy.fadeOut();
-  };
-game.addGameItem(enemy);
-}
-createEnemy(2000, 780);
-createEnemy(2300, 780);
-createEnemy(2600, 780);
-createEnemy(2900, 780);
-createEnemy(3200, 780);
+  enemy.onProjectileCollision = function () {
+    game.increaseScore(100);
+  enemy.fadeOut();
+  }
+  function createEnemy(x, y) {
+    var enemy = game.createGameItem("enemy", 25);
+    var enemyImage = draw.bitmap("img/enemyImage.png");
+    enemyImage.x = -100;
+    enemyImage.y = -230;
+    enemy.addChild(enemyImage);
+    enemy.x = x;
+    enemy.y = y;
+    enemy.velocityX = -2;
+    enemy.onPlayerCollision = function() {
+    game.changeIntegrity(-10);
+      };
+    enemy.onProjectileCollision = function() {
+    game.increaseScore(100);
+    enemy.fadeOut();
+      };
+    game.addGameItem(enemy);
+    }
+    createEnemy(2000, 780);
+    createEnemy(2300, 780);
+    createEnemy(2600, 780);
+    createEnemy(2900, 780);
+    createEnemy(3200, 780);
 
 function createReward(x, y) {
 var reward = game.createGameItem("reward", 25);
